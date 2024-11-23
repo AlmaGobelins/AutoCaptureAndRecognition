@@ -35,8 +35,8 @@ class CustomCameraViewController: UIViewController {
         super.viewDidAppear(animated)
         startSession()
         
-        // Prendre la photo après un court délai
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+        // Prendre la photo après un court délai (ici 2s)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.capturePhoto()
         }
     }
